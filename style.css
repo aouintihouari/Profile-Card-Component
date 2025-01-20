@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card::before {
+  z-index: -1;
+  content: "";
+  background-image: url("./images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 210%;
+  transform: translate(-85%, -65%);
+}
+
+.card::after {
+  z-index: -1;
+  content: "";
+  background-image: url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600%;
+  height: 200%;
+  transform: translate(95%, 73%);
+}
+
+.container {
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #19a1ae;
+  color: #2e3349;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: inset #000;
+}
+
+.header-bg {
+  width: 100%;
+  height: 140px;
+  background-image: url("./images/bg-pattern-card.svg");
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.avatar-image {
+  outline: #fff solid 5px;
+  margin: 100px 130px;
+  border-radius: 50%;
+}
+
+.details-container {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-name {
+  font-size: 18px;
+}
+
+.avatar-age {
+  font-size: 18px;
+  margin-left: 5px;
+  font-weight: normal;
+  color: #6b7082;
+}
+
+.avatar-city {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7082;
+}
+
+.footer-separation {
+  margin-top: 35px;
+  width: 100%;
+  height: 0.5px;
+  background-color: #888;
+}
+
+.footer-container {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-score {
+  font-size: 18px;
+}
+
+.footer-title {
+  font-size: 10px;
+  color: #6b7082;
+}
+
+@media screen and (max-width: 480px) {
+  .card::before {
+    transform: translate(-70%, -65%);
+  }
+  .card::after {
+    transform: translate(90%, 73%);
+  }
+}
